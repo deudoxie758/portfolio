@@ -1,7 +1,18 @@
 import Head from "next/head";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useForm, ValidationError } from "@formspree/react";
 
 const ContactPage = () => {
+  const [state, handleSubmit] = useForm("xnqyvqpj");
+  if (state.succeeded) {
+    return (
+      <div className="flex justify-center">
+        <h1 className="text-4xl font-bold text-left pb-5 justify-center">
+          Message Sent
+        </h1>
+      </div>
+    );
+  }
   return (
     <div className="flex flex-col items-start justify-center min-h-screen py-2 overflow-y-hidden">
       <Head>
@@ -15,7 +26,7 @@ const ContactPage = () => {
 
         <div className="w-full flex flex-row items-start justify-start mt-3">
           <div className="w-1/2 text-left">
-            <form>
+            <form onSubmit={handleSubmit}>
               <label
                 className="block font-medium text-gray-700 mb-2"
                 htmlFor="name"
@@ -25,6 +36,7 @@ const ContactPage = () => {
               <input
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="name"
+                name="name"
                 type="text"
                 placeholder="Your name"
               />
@@ -39,7 +51,13 @@ const ContactPage = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="email"
                 type="email"
+                name="email"
                 placeholder="Your email address"
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
               />
 
               <label
@@ -51,13 +69,20 @@ const ContactPage = () => {
               <textarea
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="message"
+                name="message"
                 rows="6"
                 placeholder="Your message"
+              />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
               />
 
               <button
                 className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4"
                 type="submit"
+                disabled={state.submitting}
               >
                 Submit
               </button>
