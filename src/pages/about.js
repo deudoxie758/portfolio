@@ -49,7 +49,7 @@ const AboutPage = () => {
             </p>
           </div>
 
-          <div className="w-1/2 flex justify-center absolute top-56 right-5">
+          <div className="w-1/2 flex justify-center absolute top-56 right-5 invisible md:visible">
             <img
               src="/headshot.jpeg"
               alt="Profile Picture"
