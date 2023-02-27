@@ -41,7 +41,7 @@ const LandingPage = () => {
         <div className="mt-10 text-left">
           <a
             href="/about"
-            className="text-xl font-bold border-b-2 border-indigo-500 hover:border-indigo-700"
+            className="text-xl font-bold border-b-2 border-gray-500 hover:border-gray-700"
           >
             Learn more about me
           </a>

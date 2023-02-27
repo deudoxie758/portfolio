@@ -5,7 +5,7 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col items-start justify-center min-h-screen py-2 overflow-y-hidden">
       <Head>
-        <title>Contact Me</title>
+        <title>Darnell Eudoxie - Contact Me</title>
         <meta name="description" content="Get in touch with me" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -56,7 +56,7 @@ const ContactPage = () => {
               />
 
               <button
-                className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mt-4"
+                className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4"
                 type="submit"
               >
                 Submit
@@ -87,12 +87,15 @@ const ContactPage = () => {
         <div className="mt-10 text-left">
           <a
             href="/"
-            className="text-xl font-bold border-b-2 border-indigo-500 hover:border-indigo-700"
+            className="text-xl font-bold border-b-2 border-gray-500 hover:border-gray-700"
           >
             Back to Home
           </a>
         </div>
       </main>
+      <footer className="flex items-center justify-start w-full h-24 border-t pl-20">
+        <p>© 2023 - Darnell Eudoxie</p>
+      </footer>
     </div>
   );
 };

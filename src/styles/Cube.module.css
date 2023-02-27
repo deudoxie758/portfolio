@@ -1,56 +1,68 @@
 .wrapper {
-  perspective: 800px;
+    perspective: 800px;
 }
 
 .cube {
-  position: relative;
-  margin: 100px auto;
-  height: 200px;
-  width: 200px;
-  transform-style: preserve-3d;
-  animation: spin 10s infinite linear;
+    position: relative;
+    margin: 100px auto;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    animation: spin 10s infinite linear;
 }
 
 .face {
-  position: absolute;
-  height: 200px;
-  width: 200px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid black;
-  line-height: 200px;
-  font-size: 80px;
-  text-align: center;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border: 4px solid;
+    border-color: black;
 }
 
 .face1 {
-  transform: translateZ(100px);
+    transform: translateZ(100px);
+    background-image: url('/javascript.png');
+    background-size: cover;
 }
 
 .face2 {
-  transform: rotateY(90deg) translateZ(100px);
+    transform: rotateY(90deg) translateZ(100px);
+    background-image: url('/react.png');
+    background-size: cover;
 }
 
 .face3 {
-  transform: rotateY(180deg) translateZ(100px);
+    transform: rotateY(180deg) translateZ(100px);
+    background-image: url('/node-js.png');
+    background-size: cover;
 }
 
 .face4 {
-  transform: rotateY(-90deg) translateZ(100px);
+    transform: rotateY(-90deg) translateZ(100px);
+    background-image: url('/next-js.png');
+    background-size: cover;
 }
 
 .face5 {
-  transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(100px);
+    background-image: url('/tailwind.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .face6 {
-  transform: rotateX(90deg) translateZ(100px);
+    transform: rotateX(90deg) translateZ(100px);
+    background-image: url('/mysql.png');
+    background-size: cover;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  100% {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
 }

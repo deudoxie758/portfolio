@@ -4,7 +4,7 @@ const AboutPage = () => {
   return (
     <div className="flex flex-col items-start justify-center min-h-screen py-2 overflow-y-hidden">
       <Head>
-        <title>About Me</title>
+        <title>Darnell Eudoxie - About Me</title>
         <meta name="description" content="Learn more about me" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -61,12 +61,15 @@ const AboutPage = () => {
         <div className="mt-10 text-left">
           <a
             href="/"
-            className="text-xl font-bold border-b-2 border-indigo-500 hover:border-indigo-700"
+            className="text-xl font-bold border-b-2 border-gray-500 hover:border-gray-700"
           >
             Back to Home
           </a>
         </div>
       </main>
+      <footer className="flex items-center justify-start w-full h-24 border-t pl-20">
+        <p>© 2023 - Darnell Eudoxie</p>
+      </footer>
     </div>
   );
 };
