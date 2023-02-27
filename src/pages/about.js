@@ -51,7 +51,7 @@ const AboutPage = () => {
 
           <div className="w-1/2 flex justify-center absolute top-56 right-5">
             <img
-              src="/profile-pic.jpg"
+              src="/headshot.jpeg"
               alt="Profile Picture"
               className="rounded-full h-80 w-80 object-cover"
             />
