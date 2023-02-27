@@ -13,6 +13,7 @@ const ProjectsPage = () => {
       image: "/workflow.png",
       techStack: "React, Next.js, Prisma, MySQL, Tailwind css, Material UI",
       githubLink: "https://github.com/deudoxie758/workflow",
+      liveLink: "https://workflow-demo-app.herokuapp.com/login",
       description:
         "WorkFlow is a powerful communication tool that helps teams collaborate and stay connected. Built using Next.js, Tailwind CSS, and MySQL, our application is fast, responsive, and user-friendly.",
     },
@@ -22,6 +23,7 @@ const ProjectsPage = () => {
       image: "/instock.png",
       techStack: "React, JavaScript, SASS",
       githubLink: "https://github.com/merinekh/siar-instock-client",
+      liveLink: "https://github.com/merinekh/siar-instock-client",
       description:
         "This inventory tracking app is built using React and Express, and it allows users to easily track their inventory levels for multiple products. Users can add new products to their inventory, track the quantity of each product, and be aware when inventory levels fall below a specified threshold. The app provides a user-friendly interface for managing inventory and helps businesses streamline their operations by ensuring that they always have the right amount of stock on hand.",
     },
@@ -31,6 +33,7 @@ const ProjectsPage = () => {
       image: "/backend.png",
       techStack: "Node.js, Express.js, RESTful API",
       githubLink: "https://github.com/merinekh/siar-instock-backend",
+      liveLink: "https://github.com/merinekh/siar-instock-backend",
       description:
         "This inventory tracking RESTful API is built using Express, and it allows users to perform CRUD operations on their inventory data, including adding new products, updating quantities, and deleting products. ",
     },
@@ -95,8 +98,8 @@ const ProjectsPage = () => {
                 >
                   <MdClose size={30} />
                 </button>
-                <h2 className="text-3xl font-bold mb-4">
-                  {selectedProject.name}
+                <h2 className="text-3xl font-bold mb-4 hover:text-gray-500">
+                  <a href={selectedProject.liveLink}>{selectedProject.name}</a>
                 </h2>
                 <div className="flex justify-center items-center mb-4">
                   <Image
