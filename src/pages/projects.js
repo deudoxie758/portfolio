@@ -37,6 +37,16 @@ const ProjectsPage = () => {
       description:
         "This inventory tracking RESTful API is built using Express, and it allows users to perform CRUD operations on their inventory data, including adding new products, updating quantities, and deleting products. ",
     },
+    {
+      id: 4,
+      name: "Giphy Search",
+      image: "/giphy-tired.png",
+      techStack: "Typescript, RESTful API, Axios, Redux",
+      githubLink: "https://github.com/deudoxie758/elevate",
+      liveLink: "https://giphy-search.herokuapp.com/",
+      description:
+        "This project is a web application that allows users to search for GIFs using the Giphy API. It was built with React and Redux, and features infinite scroll and lazy loading functionality.",
+    },
   ];
 
   const [showModal, setShowModal] = useState(false);
